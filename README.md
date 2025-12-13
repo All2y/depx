@@ -2,6 +2,10 @@
 
 **Understand what's in your node_modules.**
 
+<p align="center">
+  <img src="demo.gif" alt="depx demo" width="600">
+</p>
+
 A fast, intelligent dependency analyzer for JavaScript/TypeScript projects. Built in Rust for performance.
 
 ## Why depx?
