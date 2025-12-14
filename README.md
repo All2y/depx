@@ -106,6 +106,14 @@ $ depx deprecated
 - [ ] `pnpm-lock.yaml` (coming soon)
 - [ ] `yarn.lock` (coming soon)
 
+## Built with AI
+
+This project was built in partnership with Claude (Anthropic). I define the architecture, make decisions, review code, and handle the direction. Claude helps write code faster.
+
+I believe AI is a tool, not a replacement. The developer still needs to understand the problem, evaluate solutions, and take responsibility for the result. AI just accelerates execution.
+
+You can see Claude as a contributor in this repo, that's intentional transparency.
+
 ## License
 
 MIT
