@@ -1,6 +1,6 @@
 [package]
 name = "depx"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "Intelligent dependency analyzer for JavaScript/TypeScript projects"
 license = "MIT"
